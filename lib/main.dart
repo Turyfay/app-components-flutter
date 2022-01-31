@@ -1,4 +1,4 @@
-import 'package:app_components/screens/listview1_screeen.dart';
+import 'package:app_components/screens/listview2_screeen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'App components',
-        home: Listview1Screen());
+        home: Listview2Screen());
   }
 }
