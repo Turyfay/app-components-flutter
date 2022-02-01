@@ -15,6 +15,7 @@ class CardScreen extends StatelessWidget {
           subtitle: 'Hola Mundo',
           icon: Icons.access_alarm,
         ),
+        CustomCardImgScreen()
       ]),
     );
   }
