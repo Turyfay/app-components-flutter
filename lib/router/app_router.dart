@@ -42,6 +42,11 @@ class AppRoutes {
         icon: Icons.animation,
         name: 'Animated',
         screen: const AnimatedScreen()),
+    MenuOption(
+        route: 'input',
+        icon: Icons.input,
+        name: 'Input',
+        screen: const InputScreen()),
   ];
 
   //TODO: Crear una funcion que devuelva una lista de rutas
