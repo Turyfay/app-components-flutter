@@ -8,14 +8,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.indigo,
-          elevation: 1,
           title: const Text('Menu Componenets Flutter'),
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
                   title: Text(AppRoutes.menuOptions[index].name),
-                  leading: Icon(AppRoutes.menuOptions[index].icon),
+                  leading: Icon(
+                    AppRoutes.menuOptions[index].icon,
+                    color: Colors.indigo,
+                  ),
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () => Navigator.pushNamed(
                       context, AppRoutes.menuOptions[index].route),
