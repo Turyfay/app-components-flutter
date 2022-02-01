@@ -37,6 +37,11 @@ class AppRoutes {
         icon: Icons.account_circle,
         name: 'Avatar',
         screen: const AvatarScreen()),
+    MenuOption(
+        route: 'animated',
+        icon: Icons.animation,
+        name: 'Animated',
+        screen: const AnimatedScreen()),
   ];
 
   //TODO: Crear una funcion que devuelva una lista de rutas
