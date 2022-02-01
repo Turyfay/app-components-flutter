@@ -32,6 +32,11 @@ class AppRoutes {
         icon: Icons.card_giftcard,
         name: 'Tarjetas',
         screen: const CardScreen()),
+    MenuOption(
+        route: 'avatar',
+        icon: Icons.account_circle,
+        name: 'Avatar',
+        screen: const AvatarScreen()),
   ];
 
   //TODO: Crear una funcion que devuelva una lista de rutas
