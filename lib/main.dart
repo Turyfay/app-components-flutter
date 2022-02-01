@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'App components',
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
+      routes: AppRoutes.getMenuRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
