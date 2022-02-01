@@ -15,7 +15,6 @@ class HomeScreen extends StatelessWidget {
                   title: Text(AppRoutes.menuOptions[index].name),
                   leading: Icon(
                     AppRoutes.menuOptions[index].icon,
-                    color: Colors.indigo,
                   ),
                   trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () => Navigator.pushNamed(
