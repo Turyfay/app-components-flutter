@@ -8,6 +8,13 @@ class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.white,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        primary: primaryColor,
+      ),
+    ),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: primaryColor, elevation: 1),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(primary: primaryColor),
     ),
