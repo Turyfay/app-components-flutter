@@ -17,6 +17,6 @@ class HomeScreen extends StatelessWidget {
                   onTap: () {},
                 ),
             separatorBuilder: (context, index) => const Divider(),
-            itemCount: 100));
+            itemCount: 10));
   }
 }
