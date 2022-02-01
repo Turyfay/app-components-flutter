@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomCardImgScreen extends StatelessWidget {
-  const CustomCardImgScreen({Key? key}) : super(key: key);
+  const CustomCardImgScreen(
+      {Key? key, required this.imgURL, required this.title})
+      : super(key: key);
+
+  final String imgURL;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -13,18 +18,17 @@ class CustomCardImgScreen extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const FadeInImage(
-            image: NetworkImage(
-                'https://www.online-image-editor.com/styles/2019/images/power_girl.png'),
-            placeholder: AssetImage('assets/loading/jar-loading.gif'),
+          FadeInImage(
+            image: NetworkImage(imgURL),
+            placeholder: const AssetImage('assets/loading/jar-loading.gif'),
             width: double.infinity,
             height: 230,
             fit: BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 100),
+            fadeInDuration: const Duration(milliseconds: 100),
           ),
           Container(
             padding: const EdgeInsets.all(8),
-            child: const Text('Super Girl'),
+            child: Text(title),
           )
         ],
       ),

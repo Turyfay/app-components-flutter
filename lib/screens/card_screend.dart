@@ -15,7 +15,20 @@ class CardScreen extends StatelessWidget {
           subtitle: 'Hola Mundo',
           icon: Icons.access_alarm,
         ),
-        CustomCardImgScreen()
+        CustomCardImgScreen(
+          title: 'Super Girl',
+          imgURL:
+              'https://www.online-image-editor.com/styles/2019/images/power_girl.png',
+        ),
+        CustomCardImgScreen(
+            title: 'Colors',
+            imgURL:
+                'https://www.nawpic.com/media/2020/minimalist-nawpic-4.jpg'),
+        CustomCardImgScreen(
+            title: 'Music',
+            imgURL: 'https://wallpaperaccess.com/full/798903.png'),
+        CustomCardImgScreen(
+            title: 'Nirvana', imgURL: 'https://i.redd.it/py1i0j309go61.png')
       ]),
     );
   }

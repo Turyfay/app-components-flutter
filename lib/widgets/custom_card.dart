@@ -20,10 +20,10 @@ class CustomCard extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          const ListTile(
-            leading: Icon(Icons.account_box),
-            title: Text('Account'),
-            subtitle: Text('Your account'),
+          ListTile(
+            leading: Icon(icon),
+            title: Text(title),
+            subtitle: Text(subtitle),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 5),
