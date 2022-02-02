@@ -11,6 +11,9 @@ class CustomInputField extends StatelessWidget {
   final TextInputType inputType;
   final bool obscureText;
 
+  final String formProperty;
+  final Map<String, String> formPropertyMap;
+
   const CustomInputField({
     Key? key,
     this.labelText,
@@ -22,6 +25,8 @@ class CustomInputField extends StatelessWidget {
     this.initialValue,
     required this.inputType,
     this.obscureText = false,
+    required this.formProperty,
+    required this.formPropertyMap,
   }) : super(key: key);
 
   @override
@@ -44,6 +49,7 @@ class CustomInputField extends StatelessWidget {
       autofocus: true,
       initialValue: initialValue,
       autovalidateMode: AutovalidateMode.onUserInteraction,
+      onChanged: (value) => formPropertyMap[formProperty] = value,
       validator: (value) {
         if (value == null) {
           return 'El nombre es requerido';

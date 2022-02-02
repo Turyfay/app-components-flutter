@@ -27,25 +27,33 @@ class InputScreen extends StatelessWidget {
               key: _formKey,
               child: Column(
                 children: [
-                  const CustomInputField(
+                  CustomInputField(
+                    formProperty: 'name',
+                    formPropertyMap: formData,
                     labelText: 'Nombres',
                     hintText: 'Ingrese sus nombres',
                     inputType: TextInputType.text,
                   ),
                   const SizedBox(height: 25),
-                  const CustomInputField(
+                  CustomInputField(
+                    formProperty: 'last',
+                    formPropertyMap: formData,
                     labelText: 'Apellidos',
                     hintText: 'Ingrese sus apellidos',
                     inputType: TextInputType.text,
                   ),
                   const SizedBox(height: 25),
-                  const CustomInputField(
+                  CustomInputField(
+                    formProperty: 'email',
+                    formPropertyMap: formData,
                     labelText: 'Email',
                     hintText: 'Ingrese su email',
                     inputType: TextInputType.emailAddress,
                   ),
                   const SizedBox(height: 25),
-                  const CustomInputField(
+                  CustomInputField(
+                    formProperty: 'password',
+                    formPropertyMap: formData,
                     labelText: 'Contraseña',
                     hintText: 'Ingrese su contraseña',
                     inputType: TextInputType.text,
@@ -59,6 +67,7 @@ class InputScreen extends StatelessWidget {
                         if (_formKey.currentState!.validate())
                           {
                             _formKey.currentState!.save(),
+                            print(formData),
                             FocusScope.of(context)..requestFocus(FocusNode()),
                           }
                       },
