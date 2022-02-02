@@ -5,7 +5,7 @@ class AppTheme {
 
   static const Color secundaryColor = Colors.red;
 
-  static final ThemeData lightTheme = ThemeData(
+  static late final ThemeData lightTheme = ThemeData(
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -24,6 +24,32 @@ class AppTheme {
       color: primaryColor,
       elevation: 0,
       //iconTheme: IconThemeData(color: Colors.red),
+    ),
+
+    //InputDecorationTheme
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: primaryColor),
+      labelStyle: TextStyle(color: Colors.black),
+      /*  enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primaryColor),
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(10),
+          bottomLeft: Radius.circular(10),
+        ),
+      ), */
+      /* focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primaryColor),
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(10),
+          bottomLeft: Radius.circular(10),
+        ),
+      ), */
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(10),
+          bottomLeft: Radius.circular(10),
+        ),
+      ),
     ),
   );
 }
