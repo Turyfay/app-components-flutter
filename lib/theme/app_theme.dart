@@ -25,6 +25,15 @@ class AppTheme {
       elevation: 0,
       //iconTheme: IconThemeData(color: Colors.red),
     ),
+    //Slider
+    sliderTheme: const SliderThemeData(
+      activeTrackColor: primaryColor,
+      inactiveTrackColor: Colors.grey,
+      thumbColor: primaryColor,
+      valueIndicatorColor: Colors.red,
+
+      //overlayColor: Colors.red,
+    ),
 
     //InputDecorationTheme
     inputDecorationTheme: const InputDecorationTheme(
