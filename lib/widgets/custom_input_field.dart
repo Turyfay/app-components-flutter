@@ -9,6 +9,7 @@ class CustomInputField extends StatelessWidget {
   final String? countetText;
   final String? initialValue;
   final TextInputType inputType;
+  final bool obscureText;
 
   const CustomInputField({
     Key? key,
@@ -20,6 +21,7 @@ class CustomInputField extends StatelessWidget {
     this.countetText,
     this.initialValue,
     required this.inputType,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -27,6 +29,7 @@ class CustomInputField extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         labelText: labelText,
+
         helperText: helperText,
         hintText: hintText,
         counterText: countetText,
@@ -35,6 +38,7 @@ class CustomInputField extends StatelessWidget {
         icon: icon == null ? null : Icon(icon),
       ),
       keyboardType: inputType,
+      obscureText: obscureText,
       textCapitalization: TextCapitalization.words,
       autocorrect: true,
       autofocus: true,
