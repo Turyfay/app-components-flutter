@@ -52,6 +52,11 @@ class AppRoutes {
         icon: Icons.slideshow,
         name: 'Slider',
         screen: const SliderScreen()),
+    MenuOption(
+        route: 'ListviewBuilder',
+        icon: Icons.list,
+        name: 'ListView Builder',
+        screen: const ListviewBuilderScreen()),
   ];
 
   //TODO: Crear una funcion que devuelva una lista de rutas
