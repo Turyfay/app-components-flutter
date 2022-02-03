@@ -29,7 +29,7 @@ class _ListviewBuilderScreenState extends State<ListviewBuilderScreen> {
     if (_isLoading) return;
     _isLoading = true;
     setState(() {});
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 3));
     _loadMore();
     _isLoading = false;
     setState(() {});
@@ -41,19 +41,17 @@ class _ListviewBuilderScreenState extends State<ListviewBuilderScreen> {
   }
 
   void _loadMore() {
-    setState(() {
-      final int index = imageIds.length;
-      imageIds.addAll([1, 2, 3, 4, 5, 6, 7].map((e) => index + e));
-    });
+    final int index = imageIds.last;
+    imageIds.addAll([1, 2, 3, 4, 5].map((e) => index + e));
+    setState(() {});
   }
 
   Future<void> onRefresh() async {
     await Future.delayed(const Duration(seconds: 2));
-    final int index = imageIds.length;
+    final index = imageIds.length;
     imageIds.clear();
     imageIds.add(index + 1);
     _loadMore();
-    return;
   }
 
   @override
@@ -64,7 +62,8 @@ class _ListviewBuilderScreenState extends State<ListviewBuilderScreen> {
       body: Stack(
         children: [
           RefreshIndicator(
-            onRefresh: () => onRefresh(),
+            color: Colors.red,
+            onRefresh: onRefresh,
             child: ListView.builder(
               controller: _scrollController,
               itemCount: imageIds.length,
